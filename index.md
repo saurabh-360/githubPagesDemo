@@ -29,7 +29,10 @@ hkjhj
 
 <details>
   <summary>Your header here! (Click to expand)</summary>
+  
+  
   Your content here...
+  
   
   > markup like blockquote's should even work on github!
   more content here...
