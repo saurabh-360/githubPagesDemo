@@ -72,18 +72,15 @@
   
 * **URL**
 
-  /login
-
+  /logout
 * **Method:**
-
   `POST`
   
 *  **URL Params**
 
    **Required:**
  
-   * `email=[String]`   
-   * `password=[String]`
+   * `accessToken=[String]`   
 
 * **Data Params**
 
@@ -92,30 +89,13 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** `{ id : 12, name : "Michael Bloom", token: "accessToken", other Personal info: {list} }`
- 
-* **Error Response:**
-
-  * **Code:** 400 NOT FOUND <br />
-    **Content:** `{ error : "email/password is incorrect" }`
-
-  OR
-
-  * **Code:** 401 UNAUTHORIZED <br />
-    **Content:**
-
-     ```
-     {
-	      error : "You are unauthorized to make this request,
-   		  depending on the oauth process we use(if any)." 
-     }
-     ```
-
+    **Content:** `{ success : "logged out successfully." }`
+     
 * **Sample Call:**
 
   ```javascript
     $.ajax({
-      url: "/login",
+      url: "/logout",
       dataType: "json",
       type : "POST",
       success : function(r) {
@@ -124,8 +104,6 @@
     });
   ```
   
-
-
 
 # Home
 ----
@@ -133,7 +111,7 @@
   
 * **URL**
 
-  /login
+  /home
 
 * **Method:**
 
@@ -143,8 +121,8 @@
 
    **Required:**
  
-   * `email=[String]`   
-   * `password=[String]`
+   * `accessToken=[String]`   
+   * `userId=[String]`
 
 * **Data Params**
 
@@ -153,12 +131,20 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** `{ id : 12, name : "Michael Bloom", token: "accessToken", other Personal info: {list} }`
- 
+    **Content:** 
+
+    ```
+    {
+   categories:[
+	    {id: 1, "title":"wash", id: 1, "title":"wash"},
+		 {id: 1, "title":"wash", id: 1, "title":"wash"}
+	 	], 
+	banners: [{"key value pairs"}]
+ ```
 * **Error Response:**
 
   * **Code:** 400 NOT FOUND <br />
-    **Content:** `{ error : "email/password is incorrect" }`
+    **Content:** `{ error : "No Data Found." }`
 
   OR
 
@@ -171,18 +157,3 @@
    		  depending on the oauth process we use(if any)." 
      }
      ```
-
-* **Sample Call:**
-
-  ```javascript
-    $.ajax({
-      url: "/login",
-      dataType: "json",
-      type : "POST",
-      success : function(r) {
-        console.log(r);
-      }
-    });
-  ```
-  
-
