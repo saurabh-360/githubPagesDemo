@@ -1,37 +1,99 @@
-## Welcome to GitHub Pages
+  
+# Foo
+jhkhkjh
+hjkjh
+hkjhj
+<div id="section1">
+  <h1>Section 1</h1>
+  <p>Section 1 content</p>
+  <div id="section1-1">
+    <h2>Section1-1</h2>
+    <p>section 1-1 content</p>
+  </div>
+    <div id="section1-2">
+    <h2>Section1-2</h2>
+    <p>section 1-2 content</p>
+  </div>
+</div>
 
-You can use the [editor on GitHub](https://github.com/saurabh-360/githubPagesDemo/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+<h1>Section 1</h1>
+<p>Section 1 content</p>
+<h2>Section1-1</h2>
+<p>section 1-1 content</p>
+<h2>Section1-2</h2>
+<p>section 1-2 content</p>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+<details>
+  <summary>Your header here! (Click to expand)</summary>
+  Your content here...
+  > markup like blockquote's should even work on github!
+  more content here...
+  [Foo](#foo)
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
+**Login User**
+----
+  Validates & Returns json data about a single user.
+  
+* **URL**
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+  /login
 
-### Jekyll Themes
+* **Method:**
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/saurabh-360/githubPagesDemo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+  `POST`
+  
+*  **URL Params**
 
-### Support or Contact
+   **Required:**
+ 
+   * `email=[String]`   
+   * `password=[String]`
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+* **Data Params**
+
+  None
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `{ id : 12, name : "Michael Bloom", other Personal info: {list} }`
+ 
+* **Error Response:**
+
+  * **Code:** 400 NOT FOUND <br />
+    **Content:** `{ error : "email/password is incorrect" }`
+
+  OR
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:**
+
+     ```
+     {
+	      error : "You are unauthorized to make this request,
+   		  depending on the oauth process we use(if any)." 
+     }
+     ```
+
+* **Sample Call:**
+
+  ```javascript
+    $.ajax({
+      url: "/login",
+      dataType: "json",
+      type : "POST",
+      success : function(r) {
+        console.log(r);
+      }
+    });
+  ```
+  
+  
+</details>
