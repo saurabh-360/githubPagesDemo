@@ -1,38 +1,9 @@
-  
-# Foo
-jhkhkjh
-hjkjh
-hkjhj
-<div id="section1">
-  <h1>Section 1</h1>
-  <p>Section 1 content</p>
-  <div id="section1-1">
-    <h2>Section1-1</h2>
-    <p>section 1-1 content</p>
-  </div>
-    <div id="section1-2">
-    <h2>Section1-2</h2>
-    <p>section 1-2 content</p>
-  </div>
-</div>
+[Login](#LoginUser)
 
 
 
-<h1>Section 1</h1>
-<p>Section 1 content</p>
-<h2>Section1-1</h2>
-<p>section 1-1 content</p>
-<h2>Section1-2</h2>
-<p>section 1-2 content</p>
-
-
-
-  [Foo](#foo)
-
-
-
-
-**Login User**
+# LoginUser
+**Login **
 ----
   Validates & Returns json data about a single user.
   
