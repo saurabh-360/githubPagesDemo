@@ -1,12 +1,12 @@
-[Login](#LoginUser)
+[Login](#login)
 
-[Logout](#LogoutUser)
+[Logout](#logout)
 
-[Home](#Home)
+[Home](#home)
 
 
 
-# Login
+#Login
 ----
   Validates & Returns json data about a single user.
   
@@ -66,7 +66,7 @@
   
 
 
-# Logout
+#Logout
 ----
   Validates & Returns json data about a single user.
   
@@ -127,7 +127,7 @@
 
 
 
-# Home
+#Home
 ----
   Validates & Returns json data about a single user.
   
