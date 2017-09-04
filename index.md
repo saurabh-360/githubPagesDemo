@@ -139,8 +139,8 @@
 	    {id: 1, "title":"wash", id: 1, "title":"wash"},
 		 {id: 1, "title":"wash", id: 1, "title":"wash"}
 	 	], 
-	banners: [{"key value pairs"}]
- ```
+	banners: [{"key value pairs"}] ```
+ 
 * **Error Response:**
 
   * **Code:** 400 NOT FOUND <br />
