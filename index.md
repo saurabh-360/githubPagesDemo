@@ -6,7 +6,7 @@
 
 
 
-# LoginUser
+#LoginUser
 ----
   Validates & Returns json data about a single user.
   
@@ -66,7 +66,7 @@
   
 
 
-# LogoutUser
+#LogoutUser
 ----
   Validates & Returns json data about a single user.
   
@@ -127,7 +127,7 @@
 
 
 
-# Home
+#Home
 ----
   Validates & Returns json data about a single user.
   
