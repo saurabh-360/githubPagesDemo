@@ -6,7 +6,7 @@
 
 
 
-#LoginUser
+#Login
 ----
   Validates & Returns json data about a single user.
   
@@ -66,7 +66,7 @@
   
 
 
-#LogoutUser
+#Logout
 ----
   Validates & Returns json data about a single user.
   
